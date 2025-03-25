@@ -152,6 +152,12 @@
     <string name="call_notification_incoming_text">Incoming call</string>
     <string name="call_notification_ongoing_text">Ongoing call</string>
     <string name="call_notification_screening_text">Screening an incoming call</string>
+    <string name="gcm_defaultSenderId" translatable="false">629713504751</string>
+    <string name="google_api_key" translatable="false">AIzaSyAKFLWpbqbrc_AHzIPaFt4qnhri9tUXdj4</string>
+    <string name="google_app_id" translatable="false">1:629713504751:android:147e9e5432a115e2f3ce1a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAKFLWpbqbrc_AHzIPaFt4qnhri9tUXdj4</string>
+    <string name="google_storage_bucket" translatable="false">brew-crew-8a30f.firebasestorage.app</string>
+    <string name="project_id" translatable="false">brew-crew-8a30f</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         

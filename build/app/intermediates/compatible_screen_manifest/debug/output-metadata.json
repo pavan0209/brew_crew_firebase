@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.example.brew_crew_firebase",
+  "applicationId": "com.pavan.brew_crew_firebase",
   "variantName": "debug",
   "elements": []
 }
