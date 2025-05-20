@@ -27,6 +27,31 @@ class AuthService {
     }
   }
 
+  // register with email and password
+  Future registerWithEmailAndPassword(String email, String password) async {
+    try {
+      final result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+      final user = result.user;
+      return _userFromFirebaseUser(user);
+    } catch (e) {
+      print(e.toString());
+      return e.toString();
+      // return null;
+    }
+  }
+
+  // Sign in with email and password
+  Future signInWithEmailAndPassword(String email, String password) async {
+    try {
+      final result = await _auth.signInWithEmailAndPassword(email: email, password: password);
+      final user = result.user;
+      return _userFromFirebaseUser(user);
+    } catch (e) {
+      print(e.toString());
+      return e.toString();
+    }
+  }
+
   /// Sign out
   Future<void> signOut() async {
     try {
@@ -35,5 +60,4 @@ class AuthService {
       print("Sign out error: $e");
     }
   }
-
 }
