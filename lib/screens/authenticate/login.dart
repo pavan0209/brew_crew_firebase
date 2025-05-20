@@ -5,15 +5,16 @@ import 'package:brew_crew_firebase/services/index.dart';
 import 'package:brew_crew_firebase/utils/index.dart';
 import 'package:brew_crew_firebase/widgets/index.dart';
 
-class RegisterPage extends StatefulWidget {
+class SignInPage extends StatefulWidget {
   final Function toggleView;
-  const RegisterPage({super.key, required this.toggleView});
+
+  const SignInPage({super.key, required this.toggleView});
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
+class _SignInPageState extends State<SignInPage> {
   final AuthService _auth = AuthService();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -31,7 +32,7 @@ class _RegisterPageState extends State<RegisterPage> {
         appBar: AppBar(
           backgroundColor: Colors.brown[400],
           elevation: 0.0,
-          title: const Text('Register to Brew Crew', style: TextStyle(color: Colors.white)),
+          title: const Text('Login to Brew Crew', style: TextStyle(color: Colors.white)),
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -88,25 +89,25 @@ class _RegisterPageState extends State<RegisterPage> {
                         setState(() => isLoading = true);
                         final email = _emailController.text.toString();
                         final password = _passwordController.text.toString();
-                        dynamic result = await _auth.registerWithEmailAndPassword(email, password);
+                        dynamic result = await _auth.signInWithEmailAndPassword(email, password);
                         setState(() => isLoading = false);
                         if (result is String) {
                           AppToast.showError(context, result);
                         }
                       }
                     },
-                    label: 'Register & Login',
+                    label: 'Login',
                   ),
                   const SizedBox(height: 20),
                   RichText(
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: 'Have an account? ',
+                          text: 'Don\'t have an account? ',
                           style: TextStyle(fontSize: 16, color: Colors.grey[700]),
                         ),
                         TextSpan(
-                          text: 'Login',
+                          text: 'Register',
                           style: TextStyle(fontSize: 18, color: Colors.brown[500], fontWeight: FontWeight.w500),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
@@ -116,6 +117,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 30),
                 ],
               ),
             ),
