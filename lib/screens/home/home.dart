@@ -43,7 +43,15 @@ class HomePage extends StatelessWidget {
             const SizedBox(width: 10),
           ],
         ),
-        body: BrewList(),
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/coffee_bg.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: const BrewList(),
+        ),
       ),
     );
   }
