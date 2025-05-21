@@ -32,8 +32,9 @@ class _SettingsFormWidgetState extends State<SettingsFormWidget> {
           return Form(
             key: _formKey,
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                const Text('Update your brew settings.', style: TextStyle(fontSize: 18)),
+                const Text('Update your coffee preferences.', style: TextStyle(fontSize: 18)),
                 const SizedBox(height: 30),
                 TextFormField(
                   initialValue: userBrewData.name,
@@ -77,6 +78,7 @@ class _SettingsFormWidgetState extends State<SettingsFormWidget> {
                 ),
                 const SizedBox(height: 20),
                 Slider(
+                  label: 'coffee strength',
                   value: (_currentStrength ?? userBrewData.strength).toDouble(),
                   min: 100,
                   max: 900,
@@ -102,6 +104,7 @@ class _SettingsFormWidgetState extends State<SettingsFormWidget> {
                   },
                   label: 'Update',
                 ),
+                const SizedBox(height: 30),
               ],
             ),
           );

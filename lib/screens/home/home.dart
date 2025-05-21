@@ -96,13 +96,13 @@ class HomePage extends StatelessWidget {
   void _showSettingsPanel(context) {
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       backgroundColor: Colors.brown[50],
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       builder: (context) {
-        return Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-          child: const SettingsFormWidget(),
+        return Padding(
+          padding: EdgeInsets.fromLTRB(40, 20, 40, MediaQuery.of(context).viewInsets.bottom),
+          child: const SingleChildScrollView(child: SettingsFormWidget()),
         );
       },
     );

@@ -16,11 +16,15 @@ class _BrewListState extends State<BrewList> {
   Widget build(BuildContext context) {
     final brews = Provider.of<List<BrewModel>>(context);
 
-    return ListView.builder(
-      itemCount: brews.length,
-      itemBuilder: (context, index) {
-        return BrewTile(brew: brews[index]);
-      },
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: ListView.separated(
+        itemCount: brews.length,
+        separatorBuilder: (context, index) => const SizedBox(height: 10),
+        itemBuilder: (context, index) {
+          return BrewTile(brew: brews[index]);
+        },
+      ),
     );
   }
 }

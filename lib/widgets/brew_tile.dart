@@ -7,20 +7,17 @@ class BrewTile extends StatelessWidget {
   final BrewModel brew;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 10),
-      child: Card(
-        color: Colors.brown[50],
-        margin: const EdgeInsets.fromLTRB(20, 6, 20, 0),
-        child: ListTile(
-          leading: CircleAvatar(
-            radius: 25,
-            backgroundColor: Colors.brown[brew.strength],
-            backgroundImage: const AssetImage('assets/images/coffee_icon.png'),
-          ),
-          title: Text(brew.name),
-          subtitle: Text('Takes ${brew.sugars} sugar(s)'),
+    return Card(
+      color: Colors.brown[50],
+      margin: const EdgeInsets.fromLTRB(20, 6, 20, 0),
+      child: ListTile(
+        leading: CircleAvatar(
+          radius: 25,
+          backgroundColor: Colors.brown[brew.strength],
+          backgroundImage: const AssetImage('assets/images/coffee_icon.png'),
         ),
+        title: Text(brew.name),
+        subtitle: Text('Takes ${brew.sugars} sugar(s)'),
       ),
     );
   }
