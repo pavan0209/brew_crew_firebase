@@ -38,11 +38,11 @@ A sleek Flutter app that lets users register, log in, and manage their coffee pr
     <th>Logout</th>
   </tr>
   <tr>
-    <td><img src="assets/output/login.jpg" height="220"/></td>
-    <td><img src="assets/output/register.jpg" height="220"/></td>
-    <td><img src="assets/output/list.jpg" height="220"/></td>
-    <td><img src="assets/output/settings.jpg" height="220"/></td>
-    <td><img src="assets/output/logout.jpg" height="220"/></td>
+    <td><img src="assets/output/login.jpg" height="300"/></td>
+    <td><img src="assets/output/register.jpg" height="300"/></td>
+    <td><img src="assets/output/list.jpg" height="300"/></td>
+    <td><img src="assets/output/settings.jpg" height="300"/></td>
+    <td><img src="assets/output/logout.jpg" height="300"/></td>
   </tr>
 </table>
 
