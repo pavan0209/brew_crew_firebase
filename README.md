@@ -27,8 +27,6 @@ A sleek Flutter app that lets users register, log in, and manage their coffee pr
 
 ## 🖼️ UI Preview
 
-## 🖼️ UI Preview
-
 <table>
   <tr>
     <th>Login</th>
@@ -53,8 +51,8 @@ A sleek Flutter app that lets users register, log in, and manage their coffee pr
 **1️⃣ Clone the repo**
 
 ```bash
-git clone https://github.com/your-username/flutter-coffee-app.git
-cd flutter-coffee-app
+https://github.com/pavan0209/brew_crew_firebase.git
+cd brew_crew_firebase
 ```
 
 **2️⃣ Install Dependencies**
