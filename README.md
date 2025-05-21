@@ -31,7 +31,6 @@ A sleek Flutter app that lets users register, log in, and manage their coffee pr
 |-------|----------|-----------|----------|----------|
 | ![](assets/output/login.jpg) | ![](assets/output/register.jpg) | ![](assets/output/list.jpg) | ![](assets/output/settings.jpg) | ![](assets/output/logout.jpg) |
 
-> *Replace these image paths with your actual screenshots.*
 
 ---
 
