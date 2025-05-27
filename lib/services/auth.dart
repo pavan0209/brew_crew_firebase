@@ -37,10 +37,8 @@ class AuthService {
       // create a new document for the user with the uid
       await DatabaseService(uid: user!.uid).updateUserData('0', 'new crew member', 100);
       return _userFromFirebaseUser(user);
-    } catch (e) {
-      print(e.toString());
-      return e.toString();
-      // return null;
+    } on FirebaseAuthException catch (e) {
+      return e.message;
     }
   }
 
@@ -50,9 +48,8 @@ class AuthService {
       final result = await _auth.signInWithEmailAndPassword(email: email, password: password);
       final user = result.user;
       return _userFromFirebaseUser(user);
-    } catch (e) {
-      print(e.toString());
-      return e.toString();
+    } on FirebaseAuthException catch (e) {
+      return e.message;
     }
   }
 
